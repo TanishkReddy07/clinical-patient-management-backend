@@ -1,0 +1,38 @@
+@base=http://localhost:8000/api/v1
+
+GET {{base}} HTTP/1.1
+
+###
+
+GET {{base}}/allPatients HTTP/1.1
+
+###
+
+POST {{base}}/createPatient HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Vigneshkkar",
+    "age" : "22",
+    "room": "301",
+    "diagnosis": "Cancer"
+
+}
+
+###
+
+POST {{base}}/updatePatientHistory HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id" : "63859d7c6da543bbf17096e9",
+    "details" : {
+        "bloodPressure": "20/20",
+        "repiratoryRate": "100",
+        "bloodOxygen": "98",
+        "heartRate": "120"
+    }
+ 
+}
+
+###
